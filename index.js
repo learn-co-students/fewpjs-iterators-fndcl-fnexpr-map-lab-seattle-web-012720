@@ -12,5 +12,20 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  const newTutorials = tutorials.map(function(sentence) {
+    let words = sentence.split(' ');
+    let capitalWords = words.map(word => word[0].toUpperCase() + word.slice(1))
+    return capitalWords.join(' ')
+  })
+
+  return newTutorials
+  // return tutorials
 }
+
+console.log(titleCased())
+// titleCased()
+// let word = "hi"
+// // console.log(word[0].toUpperCase())
+// let firstLetter = word[0]
+// firstLetter = firstLetter.toUpperCase()
+// console.log(word)
